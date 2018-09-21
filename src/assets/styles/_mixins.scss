@@ -1,0 +1,20 @@
+@import "./variables";
+
+/* stylelint-disable
+declaration-no-important,
+selector-pseudo-element-whitelist,
+selector-no-vendor-prefix,
+property-no-vendor-prefix,
+sh-waqar/declaration-use-variable,
+function-comma-space-after,
+property-blacklist
+*/
+
+@mixin linear-gradient($gradient...) {
+  background: -moz-linear-gradient($gradient); /* FF3.6+ */
+  background: -webkit-gradient($gradient); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($gradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($gradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient($gradient); /* IE10+ */
+  background: linear-gradient($gradient); /* W3C */
+}

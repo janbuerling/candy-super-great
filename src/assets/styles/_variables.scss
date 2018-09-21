@@ -1,0 +1,77 @@
+//****************************** COLORS ******************************//
+
+$color-transparent: transparent;
+$color-white: #ffffff;
+$color-gray: #83878d;
+$color-black: #000000;
+
+//$color-cotton-candy: #FAE3E9;
+//$color-minted: #BED9D4;
+//$color-sunshine: #F6EDC6;
+//$color-peachy: #F9D5C7;
+//$color-fluff: #E8D6E2;
+
+$color-cotton-candy: darken(#FAE3E9, 5%);
+$color-minted: darken(#BED9D4, 5%);
+$color-sunshine: darken(#F6EDC6, 5%);
+$color-peachy: darken(#F9D5C7, 5%);
+$color-fluff: darken(#E8D6E2, 5%);
+
+$color-primary: $color-cotton-candy;
+$color-secondary: $color-minted;
+
+//HOVER
+$color-transparent-hover: rgba($color-white, 0.2);
+$color-white-hover: darken($color-white, 10%);
+$color-gray-hover: darken($color-gray, 10%);
+$color-black-hover: lighten($color-black, 10%);
+$color-cotton-candy-hover: darken($color-cotton-candy, 10%);;
+$color-minted-hover: darken($color-minted, 10%);;
+$color-sunshine-hover: darken($color-sunshine, 10%);;
+$color-peachy-hover: darken($color-peachy, 10%);;
+$color-fluff-hover: darken($color-fluff, 10%);;
+
+$color-primary-hover: $color-cotton-candy-hover;
+$color-secondary-hover: $color-minted-hover;
+
+//****************************** FONTS ******************************//
+
+$default-font: 'Roboto';
+$action-font: 'Roboto Slab';
+
+$default-font-weight-light: 300;
+$default-font-weight-bold: bold;
+
+$default-font-color: $color-black;
+$default-font-size: 16px;
+
+//****************************** GENERAL ******************************//
+
+// BODY //
+$body-width: 100%;
+$body-height: $body-width;
+$body-min-height: 100vh;
+$body-color: $color-black;
+$body-background-color: $color-white;
+
+// ELEMENT-PROPERTIES //
+$default-border-radius: 3px;
+$border-radius-none: 0;
+
+// CONTENT //
+$content-flex: 1 0 0;
+
+//****************************** MIXINS ******************************//
+
+$default-box-shadow-color: rgba(0, 0, 0, 0.3);
+$default-box-shadow-top-offset: 0;
+$default-box-shadow-right-offset: 0;
+$default-box-shadow-bottom-offset: 10px;
+$default-box-shadow-left-offset: 0;
+
+//****************************** USER INTERFACE (UI) ******************************//
+
+//****************************** USER EXPERIENCE (UX) ******************************//
+
+// Header
+$header-height: 80px;

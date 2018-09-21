@@ -1,0 +1,62 @@
+@import '../../../assets/styles/variables';
+
+.button {
+  cursor: pointer;
+  font-size: 14px;
+
+  &--border {
+
+    &-none {
+      border: none;
+    }
+  }
+
+  &--color {
+
+    &-transparent {
+      background-color: $color-transparent;
+
+      &:hover {
+        background-color: $color-transparent-hover;
+      }
+    }
+
+    &-primary {
+      background-color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary-hover;
+      }
+    }
+
+    &-secondary {
+      background-color: $color-secondary;
+
+      &:hover {
+        background-color: $color-secondary-hover;
+      }
+    }
+  }
+
+  &--font-type {
+    &-serif {
+      font-family: $default-font;
+    }
+
+    &-sans-serif {
+      font-family: $default-font;
+    }
+  }
+
+  &--shape {
+
+    &-cornered {
+      border-radius: $border-radius-none;
+    }
+
+    &-rounded {
+      border-radius: $default-border-radius;
+    }
+  }
+
+}

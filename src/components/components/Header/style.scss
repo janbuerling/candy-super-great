@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.app-header {
+  @include linear-gradient(
+    to right,
+    $color-cotton-candy,
+    $color-minted,
+    $color-sunshine,
+    $color-peachy,
+    $color-fluff
+  );
+
+  display: flex;
+  height: $header-height;
+  padding: 20px;
+  text-align: center;
+
+  &__logo {
+    animation: app-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+}
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
