@@ -11,12 +11,12 @@
 
   &--font-type {
 
-    &-serif {
+    &-default {
       font-family: $default-font;
     }
 
-    &-sans-serif {
-      font-family: $default-font;
+    &-handwriting {
+      font-family: $font-handwriting;
     }
   }
 

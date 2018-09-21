@@ -5,17 +5,17 @@ $color-white: #ffffff;
 $color-gray: #83878d;
 $color-black: #000000;
 
-//$color-cotton-candy: #FAE3E9;
-//$color-minted: #BED9D4;
-//$color-sunshine: #F6EDC6;
-//$color-peachy: #F9D5C7;
-//$color-fluff: #E8D6E2;
+$color-cotton-candy: #FAE3E9;
+$color-minted: #BED9D4;
+$color-sunshine: #F6EDC6;
+$color-peachy: #F9D5C7;
+$color-fluff: #E8D6E2;
 
-$color-cotton-candy: darken(#FAE3E9, 5%);
-$color-minted: darken(#BED9D4, 5%);
-$color-sunshine: darken(#F6EDC6, 5%);
-$color-peachy: darken(#F9D5C7, 5%);
-$color-fluff: darken(#E8D6E2, 5%);
+//$color-cotton-candy: darken(#FAE3E9, 5%);
+//$color-minted: darken(#BED9D4, 5%);
+//$color-sunshine: darken(#F6EDC6, 5%);
+//$color-peachy: darken(#F9D5C7, 5%);
+//$color-fluff: darken(#E8D6E2, 5%);
 
 $color-primary: $color-cotton-candy;
 $color-secondary: $color-minted;
@@ -36,10 +36,10 @@ $color-secondary-hover: $color-minted-hover;
 
 //****************************** FONTS ******************************//
 
-$default-font: 'Roboto';
-$action-font: 'Roboto Slab';
+$default-font: 'Patrick Hand SC';
+$font-handwriting: 'Rochester';
 
-$default-font-weight-light: 300;
+$default-font-weight-light: normal;
 $default-font-weight-bold: bold;
 
 $default-font-color: $color-black;
@@ -68,8 +68,6 @@ $default-box-shadow-top-offset: 0;
 $default-box-shadow-right-offset: 0;
 $default-box-shadow-bottom-offset: 10px;
 $default-box-shadow-left-offset: 0;
-
-//****************************** USER INTERFACE (UI) ******************************//
 
 //****************************** USER EXPERIENCE (UX) ******************************//
 

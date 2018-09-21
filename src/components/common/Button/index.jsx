@@ -12,8 +12,8 @@ export const BUTTON_BACKGROUND_COLOR = {
 };
 
 export const BUTTON_FONT_TYPE = {
-  SANS_SERIF: 'sans-serif',
-  SERIF: 'serif',
+  DEFAULT: 'default',
+  HANDWRITING: 'handwriting',
 };
 
 export const BUTTON_SHAPE = {
@@ -75,7 +75,7 @@ Button.defaultProps = {
   backgroundColor: BUTTON_BACKGROUND_COLOR.DEFAULT,
   border: BUTTON_BORDER.DEFAULT,
   className: '',
-  fontType: BUTTON_FONT_TYPE.SANS_SERIF,
+  fontType: BUTTON_FONT_TYPE.DEFAULT,
   isDisabled: false,
   shape: BUTTON_SHAPE.DEFAULT,
   type: 'button',

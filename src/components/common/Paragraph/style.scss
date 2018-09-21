@@ -17,6 +17,17 @@
     }
   }
 
+  &--font-type {
+
+    &-default {
+      font-family: $default-font;
+    }
+
+    &-handwriting {
+      font-family: $font-handwriting;
+    }
+  }
+
   &--color {
 
     &-white {

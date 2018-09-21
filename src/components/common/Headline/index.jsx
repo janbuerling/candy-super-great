@@ -10,8 +10,8 @@ export const HEADLINE_COLOR = {
 };
 
 export const HEADLINE_FONT_TYPE = {
-  SANS_SERIF: 'sans-serif',
-  SERIF: 'serif',
+  DEFAULT: 'default',
+  HANDWRITING: 'handwriting',
 };
 
 export const HEADLINE_TAG = {
@@ -79,7 +79,7 @@ Headline.propTypes = forbidExtraProps({
 Headline.defaultProps = {
   className: '',
   color: HEADLINE_COLOR.DEFAULT,
-  fontType: HEADLINE_FONT_TYPE.SERIF,
+  fontType: HEADLINE_FONT_TYPE.DEFAULT,
   headlineStyle: HEADLINE_STYLE.H2,
   noMargin: false,
   tag: HEADLINE_TAG.H2,

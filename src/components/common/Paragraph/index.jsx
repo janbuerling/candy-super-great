@@ -11,6 +11,11 @@ export const PARAGRAPH_ALIGN = {
   RIGHT: 'right',
 };
 
+export const PARAGRAPH_FONT_TYPE = {
+  DEFAULT: 'default',
+  HANDWRITING: 'handwriting',
+};
+
 export const PARAGRAPH_COLOR = {
   DEFAULT: 'default',
   WHITE: 'white',
@@ -20,10 +25,12 @@ const Paragraph = ({
   align,
   children,
   color,
+  fontType,
 }) => (
   <p
     className={classNames(
       'paragraph',
+      `paragraph--font-type-${fontType}`,
       { 'paragraph--color-white': color === PARAGRAPH_COLOR.WHITE },
       { 'paragraph--align-left': align === PARAGRAPH_ALIGN.LEFT },
       { 'paragraph--align-center': align === PARAGRAPH_ALIGN.CENTER },
@@ -38,11 +45,13 @@ Paragraph.propTypes = forbidExtraProps({
   align: PropTypes.oneOf(Object.values(PARAGRAPH_ALIGN)),
   children: PropTypes.node.isRequired,
   color: PropTypes.oneOf(Object.values(PARAGRAPH_COLOR)),
+  fontType: PropTypes.oneOf(Object.values(PARAGRAPH_FONT_TYPE)),
 });
 
 Paragraph.defaultProps = {
   align: PARAGRAPH_ALIGN.INHERIT,
   color: PARAGRAPH_COLOR.DEFAULT,
+  fontType: PARAGRAPH_FONT_TYPE.DEFAULT,
 };
 
 export default Paragraph;
