@@ -1,14 +1,14 @@
 import React from 'react';
-import DragAndDrop from '../../common/DragAndDrop';
-import DragSource from '../../common/DragAndDrop/components/DragSource';
-import DragTarget from '../../common/DragAndDrop/components/DragTarget';
-import { sweets } from '../../../mock/sweets';
+// import DragAndDrop from '../../common/DragAndDrop';
+// import DragSource from '../../common/DragAndDrop/components/DragSource';
+// import DragTarget from '../../common/DragAndDrop/components/DragTarget';
+import SweetsPage from '../../sweets/SweetsPage';
 
 class AppPage extends React.Component {
   render() {
     return (
       <div className='app-page'>
-        Page
+        <SweetsPage />
 
         {/*
         <DragAndDrop>

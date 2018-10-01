@@ -12,9 +12,9 @@ const SweetCard = ({ sweet }) => (
       {sweet.name}
     </Paragraph>
 
-    {sweet.description && (
+    {sweet.category && (
       <Paragraph>
-        {sweet.description}
+        {sweet.category}
       </Paragraph>
     )}
 
@@ -29,12 +29,13 @@ const SweetCard = ({ sweet }) => (
 SweetCard.propTypes = {
   sweet: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    category: PropTypes.string,
     image: PropTypes.shape({
       src: PropTypes.string,
       alt: PropTypes.string,
     }),
     price: PropTypes.number,
+    sale: PropTypes.number,
   }).isRequired,
 };
 
