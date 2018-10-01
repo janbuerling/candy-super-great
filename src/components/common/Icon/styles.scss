@@ -1,0 +1,25 @@
+@import "../../../assets/styles/variables";
+
+.icon {
+  width: 20px;
+  height: 20px;
+  border-radius: $border-radius-rounded;
+
+  &::before {
+    line-height: 20px;
+  }
+
+  &--color {
+
+    &-white {
+      color: $color-white;
+    }
+  }
+
+  &--background-color {
+
+    &-default {
+      background-color: $color-white;
+    }
+  }
+}
