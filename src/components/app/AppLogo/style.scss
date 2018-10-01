@@ -1,0 +1,39 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.app-logo {
+  position: relative;
+  // display: flex;
+  min-height: $header-height;
+  min-width: $header-height;
+
+  &__box {
+    $box-width: 154px;
+    $box-height: $box-width;
+
+    @include rotate(45);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: $box-width;
+    width: $box-height;
+    margin-top: -1 * ($box-height / 2);
+    margin-left: -1 * ($box-width / 2);
+    background: $color-bara-red;
+  }
+
+  &__headlines {
+    position: relative;
+  }
+
+  &__headline {
+    @include text-shadow(rgba($color-black, 0.3));
+
+    margin-bottom: $default-font-size / 2;
+  }
+
+  &__subheadline {
+    margin-top: $default-font-size / 2;
+  }
+}

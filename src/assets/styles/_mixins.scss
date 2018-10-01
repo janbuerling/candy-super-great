@@ -10,6 +10,14 @@ function-comma-space-after,
 property-blacklist
 */
 
+// shadows
+
+@mixin text-shadow($color) {
+  text-shadow: 1px 1px 2px $color;
+}
+
+// gradients
+
 @mixin linear-gradient($gradient...) {
   background: -moz-linear-gradient($gradient); /* FF3.6+ */
   background: -webkit-gradient($gradient); /* Chrome,Safari4+ */
@@ -17,4 +25,32 @@ property-blacklist
   background: -o-linear-gradient($gradient); /* Opera 11.10+ */
   background: -ms-linear-gradient($gradient); /* IE10+ */
   background: linear-gradient($gradient); /* W3C */
+}
+
+@mixin repeating-linear-gradient($gradient...) {
+  background: -moz-repeating-linear-gradient($gradient); /* FF3.6+ */
+  background: -webkit-repeating-linear-gradient($gradient); /* Chrome10+,Safari5.1+ */
+  background: -o-repeating-linear-gradient($gradient); /* Opera 11.10+ */
+  background: -ms-repeating-linear-gradient($gradient); /* IE10+ */
+  background: repeating-linear-gradient($gradient); /* W3C */
+}
+
+// generic transform
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms !important;
+  -o-transform: $transforms !important;
+  -ms-transform: $transforms !important;
+  -webkit-transform: $transforms !important;
+  transform: $transforms !important;
+}
+
+// rotate
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin rotateY($deg) {
+  @include transform(rotateY(#{$deg}deg));
 }

@@ -1,38 +1,76 @@
+/* stylelint-disable */
+
 //****************************** COLORS ******************************//
 
 $color-transparent: transparent;
 $color-white: #ffffff;
+$color-light-gray: #F0F0F0;
 $color-gray: #83878d;
 $color-black: #000000;
 
-$color-cotton-candy: #FAE3E9;
-$color-minted: #BED9D4;
-$color-sunshine: #F6EDC6;
-$color-peachy: #F9D5C7;
-$color-fluff: #E8D6E2;
+$color-sunflower: #FFC312;
+$color-radiant-yellow: #F79F1F;
+$color-puffins-bill: #EE5A24;
+$color-red-pigment: #EA2027;
 
-//$color-cotton-candy: darken(#FAE3E9, 5%);
-//$color-minted: darken(#BED9D4, 5%);
-//$color-sunshine: darken(#F6EDC6, 5%);
-//$color-peachy: darken(#F9D5C7, 5%);
-//$color-fluff: darken(#E8D6E2, 5%);
+$color-energos: #C4E538;
+$color-android-green: #A3CB38;
+$color-pixelated-green: #009432;
+$color-turkish-aqua: #006266;
 
-$color-primary: $color-cotton-candy;
-$color-secondary: $color-minted;
+$color-blue-martina: #12CBC4;
+$color-mediterranean-sea: #1289A7;
+$color-merchant-marine-blue: #0652DD;
+$color-leagues-under-the-sea: #1B1464;
+
+$color-lavender-rose: #FDA7DF;
+$color-lavender-tea: #D980FA;
+$color-forgotten-purple: #9980FA;
+$color-circumorbital-ring: #5758BB;
+
+$color-bara-red: #ED4C67;
+$color-very-berry: #B53471;
+$color-hollyhock: #833471;
+$color-magenta-purple: #6F1E51;
+
+$color-primary: $color-energos;
+$color-secondary: $color-bara-red;
 
 //HOVER
-$color-transparent-hover: rgba($color-white, 0.2);
-$color-white-hover: darken($color-white, 10%);
-$color-gray-hover: darken($color-gray, 10%);
-$color-black-hover: lighten($color-black, 10%);
-$color-cotton-candy-hover: darken($color-cotton-candy, 10%);;
-$color-minted-hover: darken($color-minted, 10%);;
-$color-sunshine-hover: darken($color-sunshine, 10%);;
-$color-peachy-hover: darken($color-peachy, 10%);;
-$color-fluff-hover: darken($color-fluff, 10%);;
+$color-hover-darken: 10%;
 
-$color-primary-hover: $color-cotton-candy-hover;
-$color-secondary-hover: $color-minted-hover;
+$color-transparent-hover: rgba($color-white, 0.2);
+$color-white-hover: darken($color-white, $color-hover-darken);
+$color-gray-hover: darken($color-gray, $color-hover-darken);
+$color-black-hover: lighten($color-black, $color-hover-darken);
+
+$color-sunflower-hover: darken($color-sunflower, $color-hover-darken);
+$color-radiant-yellow-hover: darken($color-radiant-yellow, $color-hover-darken);
+$color-puffins-bill-hover: darken($color-puffins-bill, $color-hover-darken);
+$color-red-pigment-hover: darken($color-red-pigment, $color-hover-darken);
+
+$color-energos-hover: darken($color-energos, $color-hover-darken);
+$color-android-green-hover: darken($color-android-green, $color-hover-darken);
+$color-pixelated-green-hover: darken($color-pixelated-green, $color-hover-darken);
+$color-turkish-aqua-hover: darken($color-turkish-aqua, $color-hover-darken);
+
+$color-blue-martina-hover: darken($color-blue-martina, $color-hover-darken);
+$color-mediterranean-sea-hover: darken($color-mediterranean-sea, $color-hover-darken);
+$color-merchant-marine-blue-hover: darken($color-merchant-marine-blue, $color-hover-darken);
+$color-leagues-under-the-sea-hover: darken($color-leagues-under-the-sea, $color-hover-darken);
+
+$color-lavender-rose-hover: darken($color-lavender-rose, $color-hover-darken);
+$color-lavender-tea-hover: darken($color-lavender-tea, $color-hover-darken);
+$color-forgotten-purple-hover: darken($color-forgotten-purple, $color-hover-darken);
+$color-circumorbital-ring-hover: darken($color-circumorbital-ring, $color-hover-darken);
+
+$color-bara-red-hover: darken($color-bara-red, $color-hover-darken);
+$color-very-berry-hover: darken($color-very-berry, $color-hover-darken);
+$color-hollyhock-hover: darken($color-hollyhock, $color-hover-darken);
+$color-magenta-purple-hover: darken($color-magenta-purple, $color-hover-darken);
+
+$color-primary-hover: darken($color-primary, $color-hover-darken);
+$color-secondary-hover: darken($color-secondary, $color-hover-darken);
 
 //****************************** FONTS ******************************//
 
@@ -72,4 +110,6 @@ $default-box-shadow-left-offset: 0;
 //****************************** USER EXPERIENCE (UX) ******************************//
 
 // Header
-$header-height: 80px;
+$header-height: 220px;
+
+/* stylelint-enable */

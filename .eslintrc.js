@@ -18,6 +18,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'react/no-typos': [false], // see https://github.com/yannickcr/eslint-plugin-react/issues/1389
     'react/jsx-one-expression-per-line': [2],
+    'react/destructuring-assignment': false,
   },
   parser: 'babel-eslint',
 };

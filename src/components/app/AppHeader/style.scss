@@ -1,0 +1,41 @@
+@import "../../../assets/styles/variables";
+
+.app-header {
+  $logo-wrapper-height: ($header-height / 2);
+  $nav-wrapper-height: $logo-wrapper-height - 40px;
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: $logo-wrapper-height;
+    background: $color-android-green;
+  }
+
+  &__nav-wrapper {
+    display: grid;
+    grid-template-columns: 1fr $header-height 1fr;
+    height: $nav-wrapper-height;
+    background: $color-light-gray;
+
+    &--left, &--right {
+      padding: 0 30px;
+    }
+
+    &--left {
+      text-align: right;
+    }
+
+    &--right {
+      grid-column-start: 3;
+      text-align: left;
+    }
+  }
+
+  &__nav-item {
+    font-size: 1.5em;
+    line-height: $nav-wrapper-height;
+    color: $color-gray;
+    margin: 0;
+  }
+}

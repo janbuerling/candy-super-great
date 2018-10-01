@@ -24,6 +24,7 @@ export const PARAGRAPH_COLOR = {
 const Paragraph = ({
   align,
   children,
+  className,
   color,
   fontType,
 }) => (
@@ -35,6 +36,7 @@ const Paragraph = ({
       { 'paragraph--align-left': align === PARAGRAPH_ALIGN.LEFT },
       { 'paragraph--align-center': align === PARAGRAPH_ALIGN.CENTER },
       { 'paragraph--align-right': align === PARAGRAPH_ALIGN.RIGHT },
+      className,
     )}
   >
     {children}
@@ -44,12 +46,14 @@ const Paragraph = ({
 Paragraph.propTypes = forbidExtraProps({
   align: PropTypes.oneOf(Object.values(PARAGRAPH_ALIGN)),
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(PARAGRAPH_COLOR)),
   fontType: PropTypes.oneOf(Object.values(PARAGRAPH_FONT_TYPE)),
 });
 
 Paragraph.defaultProps = {
   align: PARAGRAPH_ALIGN.INHERIT,
+  className: '',
   color: PARAGRAPH_COLOR.DEFAULT,
   fontType: PARAGRAPH_FONT_TYPE.DEFAULT,
 };
