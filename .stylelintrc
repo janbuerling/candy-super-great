@@ -1,9 +1,6 @@
 {
   "extends": "stylelint-config-awzome",
   "rules": {
-    "unit-whitelist": [
-      "fr",
-      "px"
-    ]
+    "unit-whitelist": ["fr", "px", "%", "em"]
   }
 }

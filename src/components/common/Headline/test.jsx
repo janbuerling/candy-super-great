@@ -46,26 +46,26 @@ describe('Headline', () => {
   });
 
   describe('Prop: fontType', () => {
-    it('uses a serif font by default', () => {
+    it('uses a default font by default', () => {
       const component = getComponent();
 
-      expect(component.hasClass('headline--font-type-sans-serif')).not.toBe(true);
+      expect(component.hasClass('headline--font-type-default')).toBe(true);
     });
 
-    it('uses a serif font if passed explicitly', () => {
+    it('uses a default font if passed explicitly', () => {
       const component = getComponent({
-        fontType: HEADLINE_FONT_TYPE.SERIF,
+        fontType: HEADLINE_FONT_TYPE.DEFAULT,
       });
 
-      expect(component.hasClass('headline--font-type-serif')).toBe(true);
+      expect(component.hasClass('headline--font-type-default')).toBe(true);
     });
 
-    it('uses a sans-serif font if it is passed', () => {
+    it('uses a handwriting font if it is passed', () => {
       const component = getComponent({
-        fontType: HEADLINE_FONT_TYPE.SANS_SERIF,
+        fontType: HEADLINE_FONT_TYPE.HANDWRITING,
       });
 
-      expect(component.hasClass('headline--font-type-sans-serif')).toBe(true);
+      expect(component.hasClass('headline--font-type-handwriting')).toBe(true);
     });
   });
 

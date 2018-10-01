@@ -16,6 +16,19 @@ property-blacklist
   text-shadow: 1px 1px 2px $color;
 }
 
+@mixin box-shadow-outside(
+  $offset-x: $default-box-shadow-offset-x,
+  $offset-y: $default-box-shadow-offset-y,
+  $blur-radius: $default-box-shadow-blur-radius,
+  $spread-radius: $default-box-shadow-spread-radius,
+  $color: $default-box-shadow-color
+) {
+  -webkit-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color !important;
+  -moz-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color !important;
+  -o-box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color !important;
+  box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color !important;
+}
+
 // gradients
 
 @mixin linear-gradient($gradient...) {

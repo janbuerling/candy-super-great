@@ -1,0 +1,28 @@
+@import "../../../assets/styles/variables";
+
+.product-image {
+
+  &__image-wrapper {
+    $image-wrapper-width: 150px;
+    $image-wrapper-height: $image-wrapper-width;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+
+    &::before {
+      $image-wrapper-before-width: $image-wrapper-width - 40px;
+      $image-wrapper-before-height: $image-wrapper-height - 40px;
+
+      content: "";
+      position: absolute;
+      width: $image-wrapper-before-width;
+      height: $image-wrapper-before-height;
+      background: $color-light-gray;
+      border-radius: $border-radius-rounded;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import React from 'react';
 // import DragSource from '../../common/DragAndDrop/components/DragSource';
 // import DragTarget from '../../common/DragAndDrop/components/DragTarget';
 import SweetsPage from '../../sweets/SweetsPage';
+import './style.scss';
 
 class AppPage extends React.Component {
   render() {

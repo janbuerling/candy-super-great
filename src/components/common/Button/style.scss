@@ -2,7 +2,12 @@
 
 .button {
   cursor: pointer;
-  font-size: 14px;
+  font-size: $default-font-size;
+  border: none;
+  margin: 0;
+  padding: 15px 25px;
+  width: auto;
+  outline: none;
 
   &--border {
 
@@ -11,7 +16,7 @@
     }
   }
 
-  &--color {
+  &--background-color {
 
     &-transparent {
       background-color: $color-transparent;
@@ -35,6 +40,13 @@
       &:hover {
         background-color: $color-secondary-hover;
       }
+    }
+  }
+
+  &--color {
+
+    &-white {
+      color: $color-white;
     }
   }
 

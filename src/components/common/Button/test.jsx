@@ -4,7 +4,7 @@ import Button, {
   BUTTON_BACKGROUND_COLOR,
   BUTTON_FONT_TYPE,
   BUTTON_SHAPE,
-  BUTTON_BORDER,
+  BUTTON_BORDER, BUTTON_COLOR,
 } from './index';
 
 describe('Button', () => {
@@ -26,7 +26,47 @@ describe('Button', () => {
   });
 
   describe('Prop: backgroundColor', () => {
-    it('has the default color if no button type is passed', () => {
+    it('has the default background color if no button type is passed', () => {
+      const component = getComponent();
+
+      expect(component.hasClass('button--background-color-default')).toBe(true);
+    });
+
+    it('has the default background color if it is passed explicitly', () => {
+      const component = getComponent({
+        backgroundColor: BUTTON_BACKGROUND_COLOR.DEFAULT,
+      });
+
+      expect(component.hasClass('button--background-color-default')).toBe(true);
+    });
+
+    it('has the primary background color if it is passed', () => {
+      const component = getComponent({
+        backgroundColor: BUTTON_BACKGROUND_COLOR.PRIMARY,
+      });
+
+      expect(component.hasClass('button--background-color-primary')).toBe(true);
+    });
+
+    it('has the secondary background color if it is passed', () => {
+      const component = getComponent({
+        backgroundColor: BUTTON_BACKGROUND_COLOR.SECONDARY,
+      });
+
+      expect(component.hasClass('button--background-color-secondary')).toBe(true);
+    });
+
+    it('has the transparent color if it is passed', () => {
+      const component = getComponent({
+        backgroundColor: BUTTON_BACKGROUND_COLOR.TRANSPARENT,
+      });
+
+      expect(component.hasClass('button--background-color-transparent')).toBe(true);
+    });
+  });
+
+  describe('Prop: color', () => {
+    it('has the default color if no color is passed', () => {
       const component = getComponent();
 
       expect(component.hasClass('button--color-default')).toBe(true);
@@ -34,34 +74,18 @@ describe('Button', () => {
 
     it('has the default color if it is passed explicitly', () => {
       const component = getComponent({
-        backgroundColor: BUTTON_BACKGROUND_COLOR.DEFAULT,
+        color: BUTTON_COLOR.DEFAULT,
       });
 
       expect(component.hasClass('button--color-default')).toBe(true);
     });
 
-    it('has the primary color if it is passed', () => {
+    it('has the inverted styling if it is passed', () => {
       const component = getComponent({
-        backgroundColor: BUTTON_BACKGROUND_COLOR.PRIMARY,
+        color: BUTTON_COLOR.WHITE,
       });
 
-      expect(component.hasClass('button--color-primary')).toBe(true);
-    });
-
-    it('has the secondary color if it is passed', () => {
-      const component = getComponent({
-        backgroundColor: BUTTON_BACKGROUND_COLOR.SECONDARY,
-      });
-
-      expect(component.hasClass('button--color-secondary')).toBe(true);
-    });
-
-    it('has the danger color if it is passed', () => {
-      const component = getComponent({
-        backgroundColor: BUTTON_BACKGROUND_COLOR.TRANSPARENT,
-      });
-
-      expect(component.hasClass('button--color-transparent')).toBe(true);
+      expect(component.hasClass('button--color-white')).toBe(true);
     });
   });
 
@@ -93,23 +117,23 @@ describe('Button', () => {
     it('is set to sans-serif by default', () => {
       const component = getComponent();
 
-      expect(component.hasClass('button--font-type-sans-serif')).toBe(true);
+      expect(component.hasClass('button--font-type-default')).toBe(true);
     });
 
-    it('is set to sans-serif if passed explicitly', () => {
+    it('is set to default if passed explicitly', () => {
       const component = getComponent({
-        fontType: BUTTON_FONT_TYPE.SANS_SERIF,
+        fontType: BUTTON_FONT_TYPE.DEFAULT,
       });
 
-      expect(component.hasClass('button--font-type-sans-serif')).toBe(true);
+      expect(component.hasClass('button--font-type-default')).toBe(true);
     });
 
-    it('is set to serif if passed', () => {
+    it('is set to handwriting if passed', () => {
       const component = getComponent({
-        fontType: BUTTON_FONT_TYPE.SERIF,
+        fontType: BUTTON_FONT_TYPE.HANDWRITING,
       });
 
-      expect(component.hasClass('button--font-type-serif')).toBe(true);
+      expect(component.hasClass('button--font-type-handwriting')).toBe(true);
     });
   });
 

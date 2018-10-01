@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import Paragraph, { PARAGRAPH_ALIGN, PARAGRAPH_COLOR } from './index';
+import Paragraph, { PARAGRAPH_ALIGN, PARAGRAPH_COLOR, PARAGRAPH_FONT_TYPE } from './index';
 
 describe('Paragraph', () => {
   const defaultProps = {};
@@ -46,7 +46,7 @@ describe('Paragraph', () => {
       const component = getComponent();
 
       expect(component.hasClass('paragraph')).toBe(true);
-      expect(component.hasClass('paragraph--color-white')).not.toBe(true);
+      expect(component.hasClass('paragraph--color-default')).toBe(true);
     });
 
     it('has the default color if it is passed explicitly', () => {
@@ -55,7 +55,7 @@ describe('Paragraph', () => {
       });
 
       expect(component.hasClass('paragraph')).toBe(true);
-      expect(component.hasClass('paragraph--color-white')).not.toBe(true);
+      expect(component.hasClass('paragraph--color-default')).toBe(true);
     });
 
     it('has the inverted styling if it is passed', () => {
@@ -99,6 +99,30 @@ describe('Paragraph', () => {
       });
 
       expect(component.hasClass('paragraph--align-right')).toBe(true);
+    });
+  });
+
+  describe('Prop: fontType', () => {
+    it('uses a default font by default', () => {
+      const component = getComponent();
+
+      expect(component.hasClass('paragraph--font-type-default')).toBe(true);
+    });
+
+    it('uses a default font if passed explicitly', () => {
+      const component = getComponent({
+        fontType: PARAGRAPH_FONT_TYPE.DEFAULT,
+      });
+
+      expect(component.hasClass('paragraph--font-type-default')).toBe(true);
+    });
+
+    it('uses a handwriting font if it is passed', () => {
+      const component = getComponent({
+        fontType: PARAGRAPH_FONT_TYPE.HANDWRITING,
+      });
+
+      expect(component.hasClass('paragraph--font-type-handwriting')).toBe(true);
     });
   });
 });

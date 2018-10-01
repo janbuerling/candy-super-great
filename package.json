@@ -6,13 +6,17 @@
   "dependencies": {
     "airbnb-prop-types": "^2.11.0",
     "classnames": "^2.2.6",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dnd": "^5.0.0",
     "react-dnd-html5-backend": "^5.0.1",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2"
   },
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "babel-eslint": "^8.2.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -25,8 +29,11 @@
     "grunt": "^1.0.3",
     "grunt-fontello": "^0.3.6",
     "grunt-fontello-react": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
+    "postcss-modules": "^1.4.1",
     "stylelint": "^9.5.0",
     "stylelint-config-awzome": "^1.1.1",
     "stylelint-config-recommended-scss": "^3.2.0",
@@ -34,6 +41,16 @@
   },
   "scripts": {
     "start": "parcel serve ./src/index.html -p 3000 --no-cache --open",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html",
+    "test": "jest"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./src/setupTests.js",
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "collectCoverageFrom": [
+      "./src/**"
+    ]
   }
 }

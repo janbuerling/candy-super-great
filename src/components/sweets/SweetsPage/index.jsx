@@ -1,12 +1,12 @@
 import React from 'react';
-import SweetsList from '../SweetsList';
+import ProductList from '../../products/ProductList';
 import { SweetsContext } from '../SweetsProvider';
 
 const SweetsPage = () => (
   <div className='sweets-page'>
     <SweetsContext.Consumer>
       {({ sweets }) => (
-        <SweetsList sweets={sweets} />
+        <ProductList products={sweets} />
       )}
     </SweetsContext.Consumer>
   </div>

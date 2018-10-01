@@ -32,7 +32,7 @@ const Paragraph = ({
     className={classNames(
       'paragraph',
       `paragraph--font-type-${fontType}`,
-      { 'paragraph--color-white': color === PARAGRAPH_COLOR.WHITE },
+      `paragraph--color-${color}`,
       { 'paragraph--align-left': align === PARAGRAPH_ALIGN.LEFT },
       { 'paragraph--align-center': align === PARAGRAPH_ALIGN.CENTER },
       { 'paragraph--align-right': align === PARAGRAPH_ALIGN.RIGHT },

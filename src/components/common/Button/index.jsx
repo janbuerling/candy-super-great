@@ -27,11 +27,17 @@ export const BUTTON_BORDER = {
   NONE: 'none',
 };
 
+export const BUTTON_COLOR = {
+  DEFAULT: 'default',
+  WHITE: 'white',
+};
+
 const Button = ({
   backgroundColor,
   border,
   children,
   className,
+  color,
   fontType,
   isDisabled,
   onClick,
@@ -42,7 +48,8 @@ const Button = ({
     className={classNames(
       'button',
       `button--border-${border}`,
-      `button--color-${backgroundColor}`,
+      `button--background-color-${backgroundColor}`,
+      `button--color-${color}`,
       `button--shape-${shape}`,
       `button--font-type-${fontType}`,
       className,
@@ -61,6 +68,7 @@ export const buttonPropTypes = {
   backgroundColor: PropTypes.oneOf(Object.values(BUTTON_BACKGROUND_COLOR)),
   border: PropTypes.oneOf(Object.values(BUTTON_BORDER)),
   className: PropTypes.string, // This prop should only be used in very rare cases!!!
+  color: PropTypes.oneOf(Object.values(BUTTON_COLOR)),
   fontType: PropTypes.oneOf(Object.values(BUTTON_FONT_TYPE)),
   isDisabled: PropTypes.bool,
   shape: PropTypes.oneOf(Object.values(BUTTON_SHAPE)),
@@ -75,6 +83,7 @@ Button.defaultProps = {
   backgroundColor: BUTTON_BACKGROUND_COLOR.DEFAULT,
   border: BUTTON_BORDER.DEFAULT,
   className: '',
+  color: BUTTON_COLOR.DEFAULT,
   fontType: BUTTON_FONT_TYPE.DEFAULT,
   isDisabled: false,
   shape: BUTTON_SHAPE.DEFAULT,

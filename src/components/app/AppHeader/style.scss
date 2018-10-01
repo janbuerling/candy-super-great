@@ -4,6 +4,9 @@
   $logo-wrapper-height: ($header-height / 2);
   $nav-wrapper-height: $logo-wrapper-height - 40px;
 
+  position: relative;
+  z-index: 99;
+
   &__logo-wrapper {
     display: flex;
     justify-content: center;
@@ -16,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr $header-height 1fr;
     height: $nav-wrapper-height;
+    margin-bottom: $logo-wrapper-height - $nav-wrapper-height;
     background: $color-light-gray;
 
     &--left, &--right {
@@ -33,7 +37,7 @@
   }
 
   &__nav-item {
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: $nav-wrapper-height;
     color: $color-gray;
     margin: 0;
