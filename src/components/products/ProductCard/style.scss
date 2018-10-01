@@ -3,10 +3,13 @@
 
 .product-card {
   $product-card-border-radius: $default-border-radius * 3;
+  $product-card-footer-height: 56px;
 
   @include box-shadow-outside(0, 0, 50px, 30px, rgba($color-black, 0.05));
 
+  position: relative;
   margin: 30px;
+  padding-bottom: $product-card-footer-height;
   border-radius: $product-card-border-radius;
   background: $color-white;
 
@@ -29,7 +32,12 @@
   }
 
   &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
+    height: $product-card-footer-height;
     background: $color-bara-red;
     border-bottom-left-radius: $product-card-border-radius;
     border-bottom-right-radius: $product-card-border-radius;
