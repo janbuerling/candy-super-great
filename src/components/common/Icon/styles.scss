@@ -18,8 +18,12 @@
 
   &--background-color {
 
-    &-default {
+    &-white {
       background-color: $color-white;
+    }
+
+    &-transparent {
+      background-color: $color-transparent;
     }
   }
 }

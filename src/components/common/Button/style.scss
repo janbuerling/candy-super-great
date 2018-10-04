@@ -5,7 +5,7 @@
   font-size: $default-font-size;
   border: none;
   margin: 0;
-  padding: 15px 25px;
+  padding: 10px 15px;
   width: auto;
   outline: none;
 
@@ -41,6 +41,14 @@
         background-color: $color-secondary-hover;
       }
     }
+
+    &-white {
+      background-color: $color-white;
+
+      &:hover {
+        background-color: $color-white-hover;
+      }
+    }
   }
 
   &--color {
@@ -68,8 +76,11 @@
     }
 
     &-rounded {
-      border-radius: $default-border-radius;
+      border-radius: $border-radius-rounded;
+    }
+
+    &-round {
+      border-radius: $border-radius-round;
     }
   }
-
 }

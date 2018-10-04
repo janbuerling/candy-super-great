@@ -1,4 +1,14 @@
+@import "../../../assets/styles/variables";
+
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media only screen and (max-width: $breakpoint-medium-max) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: $breakpoint-small-max) {
+    grid-template-columns: 1fr;
+  }
 }

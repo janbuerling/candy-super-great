@@ -26,3 +26,5 @@ yarn-error.log*
 
 # Pycharm
 .idea
+
+!fontello.css

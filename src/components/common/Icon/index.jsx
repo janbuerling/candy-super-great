@@ -41,7 +41,6 @@ Icon.propTypes = forbidExtraProps({
     'menu-1',
     'down-open-big',
     'up-open-big',
-    'truck',
   ]),
 });
 

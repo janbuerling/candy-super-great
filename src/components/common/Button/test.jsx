@@ -63,29 +63,13 @@ describe('Button', () => {
 
       expect(component.hasClass('button--background-color-transparent')).toBe(true);
     });
-  });
 
-  describe('Prop: color', () => {
-    it('has the default color if no color is passed', () => {
-      const component = getComponent();
-
-      expect(component.hasClass('button--color-default')).toBe(true);
-    });
-
-    it('has the default color if it is passed explicitly', () => {
+    it('has the white color if it is passed', () => {
       const component = getComponent({
-        color: BUTTON_COLOR.DEFAULT,
+        backgroundColor: BUTTON_BACKGROUND_COLOR.WHITE,
       });
 
-      expect(component.hasClass('button--color-default')).toBe(true);
-    });
-
-    it('has the inverted styling if it is passed', () => {
-      const component = getComponent({
-        color: BUTTON_COLOR.WHITE,
-      });
-
-      expect(component.hasClass('button--color-white')).toBe(true);
+      expect(component.hasClass('button--background-color-white')).toBe(true);
     });
   });
 
@@ -113,32 +97,7 @@ describe('Button', () => {
     });
   });
 
-  describe('Prop: fontType', () => {
-    it('is set to sans-serif by default', () => {
-      const component = getComponent();
-
-      expect(component.hasClass('button--font-type-default')).toBe(true);
-    });
-
-    it('is set to default if passed explicitly', () => {
-      const component = getComponent({
-        fontType: BUTTON_FONT_TYPE.DEFAULT,
-      });
-
-      expect(component.hasClass('button--font-type-default')).toBe(true);
-    });
-
-    it('is set to handwriting if passed', () => {
-      const component = getComponent({
-        fontType: BUTTON_FONT_TYPE.HANDWRITING,
-      });
-
-      expect(component.hasClass('button--font-type-handwriting')).toBe(true);
-    });
-  });
-
-
-  describe('Content (Prop: children)', () => {
+  describe('Prop: children', () => {
     it('renders a string as content', () => {
       content = 'Test';
 
@@ -164,6 +123,65 @@ describe('Button', () => {
       const component = getComponent();
 
       expect(component.contains(content)).toBe(true);
+    });
+  });
+
+  describe('Prop: className', () => {
+    it('has the custom class if it is passed', () => {
+      const className = 'custom-class-name';
+      const component = getComponent({
+        className,
+      });
+
+      expect(component.hasClass(className)).toBe(true);
+    });
+  });
+
+  describe('Prop: color', () => {
+    it('has the default color if no color is passed', () => {
+      const component = getComponent();
+
+      expect(component.hasClass('button--color-default')).toBe(true);
+    });
+
+    it('has the default color if it is passed explicitly', () => {
+      const component = getComponent({
+        color: BUTTON_COLOR.DEFAULT,
+      });
+
+      expect(component.hasClass('button--color-default')).toBe(true);
+    });
+
+    it('has the inverted styling if it is passed', () => {
+      const component = getComponent({
+        color: BUTTON_COLOR.WHITE,
+      });
+
+      expect(component.hasClass('button--color-white')).toBe(true);
+    });
+  });
+
+  describe('Prop: fontType', () => {
+    it('is set to default by default', () => {
+      const component = getComponent();
+
+      expect(component.hasClass('button--font-type-default')).toBe(true);
+    });
+
+    it('is set to default if passed explicitly', () => {
+      const component = getComponent({
+        fontType: BUTTON_FONT_TYPE.DEFAULT,
+      });
+
+      expect(component.hasClass('button--font-type-default')).toBe(true);
+    });
+
+    it('is set to handwriting if passed', () => {
+      const component = getComponent({
+        fontType: BUTTON_FONT_TYPE.HANDWRITING,
+      });
+
+      expect(component.hasClass('button--font-type-handwriting')).toBe(true);
     });
   });
 
@@ -226,6 +244,14 @@ describe('Button', () => {
       });
 
       expect(component.hasClass('button--shape-rounded')).toBe(true);
+    });
+
+    it('has the round shape if it is passed', () => {
+      const component = getComponent({
+        shape: BUTTON_SHAPE.ROUND,
+      });
+
+      expect(component.hasClass('button--shape-round')).toBe(true);
     });
 
     it('has the cornered shape if it is passed', () => {

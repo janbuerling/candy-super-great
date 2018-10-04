@@ -22,8 +22,16 @@
     margin-bottom: $logo-wrapper-height - $nav-wrapper-height;
     background: $color-light-gray;
 
+    @media only screen and (max-width: $breakpoint-small-max) {
+      grid-template-columns: 1fr;
+    }
+
     &--left, &--right {
       padding: 0 30px;
+
+      @media only screen and (max-width: $breakpoint-small-max) {
+        display: none;
+      }
     }
 
     &--left {

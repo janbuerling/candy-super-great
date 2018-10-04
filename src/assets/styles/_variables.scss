@@ -95,7 +95,8 @@ $body-background-color: $color-white;
 // ELEMENT-PROPERTIES //
 $default-border-radius: 3px;
 $border-radius-none: 0;
-$border-radius-rounded: 50%;
+$border-radius-rounded: $default-border-radius;
+$border-radius-round: 50%;
 
 // CONTENT //
 $content-flex: 1 0 0;
@@ -108,7 +109,21 @@ $default-box-shadow-offset-y: 0;
 $default-box-shadow-blur-radius: 10px;
 $default-box-shadow-spread-radius: 0;
 
+//****************************** BREAKPOINTS ******************************//
+
+$breakpoint-mini-max: 479px;
+$breakpoint-small-min: $breakpoint-mini-max + 1;
+$breakpoint-small-max: 767px;
+$breakpoint-medium-min: $breakpoint-small-max + 1;
+$breakpoint-medium-max: 959px;
+$breakpoint-large-min: $breakpoint-medium-max + 1;
+$breakpoint-large-max: 1199px;
+
+
 //****************************** USER EXPERIENCE (UX) ******************************//
+
+//Page
+$page-max-width: $breakpoint-large-max + 1;
 
 // Header
 $header-height: 220px;

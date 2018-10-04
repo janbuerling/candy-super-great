@@ -1,7 +1,12 @@
 import React from 'react';
-import Headline, { HEADLINE_COLOR, HEADLINE_FONT_TYPE, HEADLINE_STYLE, HEADLINE_TAG } from '../../common/Headline';
-import './style.scss';
+import Headline, {
+  HEADLINE_COLOR,
+  HEADLINE_FONT_TYPE,
+  HEADLINE_STYLE,
+  HEADLINE_TAG,
+} from '../../common/Headline';
 import Paragraph, { PARAGRAPH_COLOR } from '../../common/Paragraph';
+import './style.scss';
 
 const AppLogo = () => (
   <div className='app-logo'>

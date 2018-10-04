@@ -9,6 +9,7 @@ export const BUTTON_BACKGROUND_COLOR = {
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
   TRANSPARENT: 'transparent',
+  WHITE: 'white',
 };
 
 export const BUTTON_FONT_TYPE = {
@@ -19,6 +20,7 @@ export const BUTTON_FONT_TYPE = {
 export const BUTTON_SHAPE = {
   DEFAULT: 'default',
   ROUNDED: 'rounded',
+  ROUND: 'round',
   CORNERED: 'cornered',
 };
 

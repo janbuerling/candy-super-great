@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button, { BUTTON_BACKGROUND_COLOR, BUTTON_COLOR } from '../../common/Button';
 import Headline, { HEADLINE_FONT_TYPE } from '../../common/Headline';
 import Paragraph from '../../common/Paragraph/index';
 import ProductImage from '../ProductImage/index';
@@ -17,7 +16,7 @@ export const productPropTypes = {
   sale: PropTypes.number,
 };
 
-const ProductCard = ({ product }) => (
+const ProductCard = ({ product, renderCardFooter }) => (
   <div className='product-card'>
     <div className='product-card__body'>
       {product.image && (
@@ -47,21 +46,17 @@ const ProductCard = ({ product }) => (
       )}
     </div>
 
-    <div className='product-card__footer'>
-      <Button
-        backgroundColor={BUTTON_BACKGROUND_COLOR.TRANSPARENT}
-        color={BUTTON_COLOR.WHITE}
-        onClick={() => {
-        }}
-      >
-        Add To Sweets Box
-      </Button>
-    </div>
+    {renderCardFooter && renderCardFooter(product)}
   </div>
 );
 
 ProductCard.propTypes = {
   product: PropTypes.shape(productPropTypes).isRequired,
+  renderCardFooter: PropTypes.func,
+};
+
+ProductCard.defaultProps = {
+  renderCardFooter: null,
 };
 
 export default ProductCard;

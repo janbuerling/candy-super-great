@@ -34,7 +34,7 @@ module.exports = function (grunt) {
           eotPath: './src/components/common/Icon/font/fontello.eot', // Path to EOT
           ttfPath: './src/components/common/Icon/font/fontello.ttf', // Path to TTF
           jsTplPath: './src/components/common/Icon/fontello-es2016.tpl', // React component template (to use your own)
-          cssOutputPath: './src/assets/styles/Icon.css',
+          cssOutputPath: './src/assets/styles/fontello.css',
           jsOutputPath: './src/components/common/Icon/index.jsx', // Location of React component output
         }
       },
