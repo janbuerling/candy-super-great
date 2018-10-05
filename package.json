@@ -43,8 +43,7 @@
     "stylelint-scss": "^3.3.0"
   },
   "scripts": {
-    "start": "parcel serve ./src/index.html -p 3000 --no-cache --open",
-    "build": "parcel build ./src/index.html",
+    "start": "parcel serve ./src/index.html -p 3000 --open",
     "test": "jest"
   },
   "jest": {
