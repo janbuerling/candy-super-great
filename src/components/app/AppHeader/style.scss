@@ -49,5 +49,10 @@
     line-height: $nav-wrapper-height;
     color: $color-gray;
     margin: 0;
+    text-decoration: none;
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }

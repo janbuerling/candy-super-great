@@ -1,6 +1,7 @@
 module.exports = {
   extends: 'airbnb',
   globals: {
+    'console': true,
     'window': true,
     'document': true,
     'localStorage': true,

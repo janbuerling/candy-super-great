@@ -38,7 +38,7 @@ class Counter extends React.Component {
     const { score } = this.state;
 
     this.setState({ score: score < max ? score + 1 : max }, () => {
-      onChange(score);
+      onChange(this.state.score);
     });
   };
 
@@ -47,7 +47,7 @@ class Counter extends React.Component {
     const { score } = this.state;
 
     this.setState({ score: score > min ? score - 1 : min }, () => {
-      onChange(score);
+      onChange(this.state.score);
     });
   };
 

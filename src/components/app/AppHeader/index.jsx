@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import AppLogo from '../AppLogo';
 import './style.scss';
 
@@ -11,15 +11,13 @@ const AppHeader = () => (
 
     <div className='app-header__nav-wrapper'>
       <div className='app-header__nav-wrapper--left'>
-        <Link to='/sweets' className='app-header__nav-item'>
+        <NavLink to='/sweets' className='app-header__nav-item'>
           View Our Sweets
-        </Link>
+        </NavLink>
       </div>
 
       <div className='app-header__nav-wrapper--right'>
-        <Link to='/sweets-box' className='app-header__nav-item'>
-          My Sweets Box
-        </Link>
+        {/* ADD NEW LINKS HERE */}
       </div>
     </div>
   </header>

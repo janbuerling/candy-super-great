@@ -6,7 +6,8 @@ import './style.scss';
 const AppPage = () => (
   <div className='app-page'>
     <Route path='/sweets' component={SweetsPage} exact />
-    <Route path='/sweets-box' component={SweetsPage} exact />
+
+    {/* ADD NEW ROUTES HERE */}
   </div>
 );
 

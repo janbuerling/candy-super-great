@@ -8,18 +8,21 @@ import './style.scss';
 class SweetsPage extends React.Component {
   /**
    * @description renders every product card footer from product card list.
+   * @param product
    * @return {*}
    */
-  renderProductCardFooter = () => {
+  renderProductCardFooter = ({ name }) => {
     let score = 0;
 
     return (
       <div className='product-card__footer'>
         <Button
           backgroundColor={BUTTON_BACKGROUND_COLOR.TRANSPARENT}
-          className='product-card__add-button'
+          className='product-card__add-product-button'
           color={BUTTON_COLOR.WHITE}
-          onClick={() => {}}
+          onClick={() => {
+            console.info(`Added ${score} x ${name}`);
+          }}
         >
           Add To Sweets Box
         </Button>

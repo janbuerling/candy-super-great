@@ -103,10 +103,10 @@ $content-flex: 1 0 0;
 
 //****************************** MIXINS ******************************//
 
-$default-box-shadow-color: rgba($color-black, 0.3);
+$default-box-shadow-color: rgba(46, 46, 46, 0.1);
 $default-box-shadow-offset-x: 0;
 $default-box-shadow-offset-y: 0;
-$default-box-shadow-blur-radius: 10px;
+$default-box-shadow-blur-radius: 80px;
 $default-box-shadow-spread-radius: 0;
 
 //****************************** BREAKPOINTS ******************************//
