@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             'fontello-embedded.css',
             'fontello-ie7.css',
             'fontello-ie7-codes.css',
-            'fontello.scss',
+            '_fontello.scss',
             'fontello.woff2'
           ],
           force: true,
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
           eotPath: './src/components/common/Icon/font/fontello.eot', // Path to EOT
           ttfPath: './src/components/common/Icon/font/fontello.ttf', // Path to TTF
           jsTplPath: './src/components/common/Icon/fontello-es2016.tpl', // React component template (to use your own)
-          cssOutputPath: './src/assets/styles/fontello.scss',
+          cssOutputPath: './src/assets/styles/_fontello.scss',
           jsOutputPath: './src/components/common/Icon/index.jsx', // Location of React component output
         }
       },

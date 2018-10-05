@@ -11,6 +11,7 @@ export const ICON_BACKGROUND_COLOR = {
 
 export const ICON_COLOR = {
   DEFAULT: 'default',
+  TRANSPARENT: 'transparent',
   WHITE: 'white',
 };
 
