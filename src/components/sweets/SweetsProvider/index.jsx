@@ -9,20 +9,15 @@ export const SweetsContext = React.createContext({ sweets: [] });
 class SweetsProvider extends React.Component {
   state = {
     sweets: sweetsMock,
-    sweetsBox: [],
-  };
-
-  addToSweetsBox = () => {
-
   };
 
   render() {
     const { children } = this.props;
-    const { sweets, sweetsBox } = this.state;
+    const { sweets } = this.state;
 
     return (
-      <SweetsContext.Provider value={{ sweets, sweetsBox }}>
-        { children }
+      <SweetsContext.Provider value={{ sweets }}>
+        {children}
       </SweetsContext.Provider>
     );
   }
