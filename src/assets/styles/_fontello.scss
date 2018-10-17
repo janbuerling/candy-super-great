@@ -1,12 +1,11 @@
 @font-face {
-    font-family: 'fontello';
-    src: url('./../../components/common/Icon/font/fontello.eot?1538750436508');
-    src: url('./../../components/common/Icon/font/fontello.eot?1538750436508#iefix') format('embedded-opentype'),
-       url('./../../components/common/Icon/font/fontello.woff?1538750436508') format('woff'),
-       url('./../../components/common/Icon/font/fontello.ttf?1538750436508') format('truetype'),
-       url('./../../components/common/Icon/font/fontello.svg?1538750436508#fontello') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "fontello";
+  src: url("https://uploads.codesandbox.io/uploads/user/560c12a1-e759-45c2-b33d-6129d1df9ded/5Spi-fontello.eot");
+  src: url("https://uploads.codesandbox.io/uploads/user/560c12a1-e759-45c2-b33d-6129d1df9ded/5Spi-fontello.eot#iefix") format('embedded-opentype'),
+    url("https://uploads.codesandbox.io/uploads/user/560c12a1-e759-45c2-b33d-6129d1df9ded/AwV--fontello.woff") format('woff'),
+    url("https://uploads.codesandbox.io/uploads/user/560c12a1-e759-45c2-b33d-6129d1df9ded/BQGj-fontello.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
