@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Button, { BUTTON_BACKGROUND_COLOR, BUTTON_COLOR } from '../../common/Button';
 import Counter, { COUNTER_SCORE_COLOR } from '../../common/Counter';
 import ProductList from '../../products/ProductList';
@@ -21,7 +22,7 @@ class SweetsPage extends React.Component {
           className='product-card__add-product-button'
           color={BUTTON_COLOR.WHITE}
           onClick={() => {
-            console.info(`Added ${score} x ${name}`);
+            toast(`🦄 Added ${score} x ${name}`);
           }}
         >
           Add To Sweets Box
