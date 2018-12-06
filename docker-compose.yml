@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  frontend:
+    build: .
+    command: yarn start
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./.eslintignore:/app/.eslintignore
+      - ./.eslintrc.js:/app/.eslintrc.js
+      - ./.babelrc.js:/app/.babelrc.js
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    restart: "no"
