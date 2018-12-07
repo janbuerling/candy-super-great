@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import Button, { BUTTON_BACKGROUND_COLOR, BUTTON_COLOR } from '../../common/Button';
 import Counter, { COUNTER_SCORE_COLOR } from '../../common/Counter';
 import ProductList from '../../products/ProductList';
-import { SweetsContext } from '../SweetsProvider';
+import withSweetsConsumer from '../SweetsProvider/withSweetsConsumer';
 import './style.scss';
 
 class SweetsPage extends React.Component {
@@ -12,7 +13,8 @@ class SweetsPage extends React.Component {
    * @param product
    * @return {*}
    */
-  renderProductCardFooter = ({ name }) => {
+  renderProductCardFooter = (product) => {
+    const { id, name } = product;
     let score = 0;
 
     return (
@@ -22,7 +24,7 @@ class SweetsPage extends React.Component {
           className='product-card__add-product-button'
           color={BUTTON_COLOR.WHITE}
           onClick={() => {
-            toast(`🦄 Added ${score} x ${name}`);
+            toast(`🦄 Added ${score} x ${name} (ID: ${id})`);
           }}
         >
           Add To Sweets Box
@@ -41,19 +43,30 @@ class SweetsPage extends React.Component {
   };
 
   render() {
+    const { sweets } = this.props;
+
     return (
       <div className='sweets-page'>
-        <SweetsContext.Consumer>
-          {({ sweets }) => (
-            <ProductList
-              products={sweets}
-              renderCardFooter={this.renderProductCardFooter}
-            />
-          )}
-        </SweetsContext.Consumer>
+        <ProductList
+          products={sweets}
+          renderCardFooter={this.renderProductCardFooter}
+        />
       </div>
     );
   }
 }
 
-export default SweetsPage;
+SweetsPage.propTypes = {
+  sweets: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+      name: PropTypes.number.isRequired,
+    }),
+  ),
+};
+
+SweetsPage.defaultProps = {
+  sweets: [],
+};
+
+export default withSweetsConsumer(SweetsPage);

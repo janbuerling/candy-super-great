@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Redirect,
   Route,
   Switch,
 } from 'react-router-dom';
@@ -19,8 +18,6 @@ class App extends React.Component {
               <Route path='/' component={AppHeader} />
               <Route path='/' component={AppPage} />
             </SweetsProvider>
-
-            <Redirect from='/' to='/sweets' />
           </Switch>
         </Router>
       </div>
