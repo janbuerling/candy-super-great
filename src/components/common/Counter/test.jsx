@@ -19,5 +19,15 @@ describe('Counter', () => {
       component.find('.counter__counter-button-plus').simulate('click');
       expect(handler).toHaveBeenCalled();
     });
+
+    it('call prop function onChange if a button minus clicked', () => {
+      const handler = jest.fn();
+      const component = getComponent({
+        onChange: handler,
+      });
+
+      component.find('.counter__counter-button-minus').simulate('click');
+      expect(handler).toHaveBeenCalled();
+    });
   });
 });
