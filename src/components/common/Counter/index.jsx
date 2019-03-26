@@ -59,7 +59,7 @@ class Counter extends React.Component {
       <div className='counter'>
         <Button
           backgroundColor={BUTTON_BACKGROUND_COLOR.WHITE}
-          className='counter__counter-button'
+          className='counter__counter-button counter__counter-button-minus'
           onClick={this.reduceScore}
           shape={BUTTON_SHAPE.ROUND}
         >
@@ -77,7 +77,7 @@ class Counter extends React.Component {
 
         <Button
           backgroundColor={BUTTON_BACKGROUND_COLOR.WHITE}
-          className='counter__counter-button'
+          className='counter__counter-button counter__counter-button-plus'
           onClick={this.addScore}
           shape={BUTTON_SHAPE.ROUND}
         >

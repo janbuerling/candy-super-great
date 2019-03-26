@@ -10,13 +10,13 @@ describe('Counter', () => {
   ));
 
   describe('Prop: onChange', () => {
-    it('call prop function onChange if a change happens', () => {
+    it('call prop function onChange if a button plus clicked', () => {
       const handler = jest.fn();
       const component = getComponent({
-        handler,
+        onChange: handler,
       });
 
-      component.find('Button').simulate('click');
+      component.find('.counter__counter-button-plus').simulate('click');
       expect(handler).toHaveBeenCalled();
     });
   });
